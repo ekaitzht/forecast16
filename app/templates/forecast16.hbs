@@ -1,0 +1,15 @@
+
+<div id="city-name">Forecast 16 days for {{model.city.name}}</div>
+
+
+
+<div class="cities-list">
+	{{#each model.list as |item index|}}
+		{{#link-to "cityforecast" index  model.city.name}}
+		    	<div class="date">{{format-date item.dt}}</div>
+		    	<div class="temperature">{{item.temp.day}}</div>
+		    	<div class="deg">{{item.weather.[0].description}}</div>
+		    	<div class="low-temp">{{item.temp.min}} <span> Low</span></div>
+		{{/link-to}}
+	{{/each}}
+</div>

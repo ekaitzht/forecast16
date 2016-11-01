@@ -1,0 +1,12 @@
+{{outlet}}
+
+<div class="date-detail">Weather {{format-date model.dt}} </div>
+
+<div class="city-detail">
+    	<div class="temperature">{{model.temp.day}}</div>
+    	<div class="deg">{{model.weather.[0].description}}</div>
+    	<div class="low-temp">{{model.temp.min}} <span> Low</span></div>
+    	<div class="wind-speed"> Wind Speed: {{model.speed}} meter/sec</div>
+    	<div class="wind-direction"> Wind direction: {{model.deg}} °</div>
+    	<div claas="pressure">Pressure: {{model.pressure}} hPa</div>
+</div>
